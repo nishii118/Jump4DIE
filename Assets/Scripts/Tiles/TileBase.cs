@@ -133,7 +133,7 @@ public class TileBase : MonoBehaviour
             other.transform.SetParent(this.transform);
             // jump once
             player.CanFly = true;
-
+            player.SetIsFlying(false);
             Debug.Log(this.tileIndex);
             if (this.tileSO.tileIndex != 0)
             {

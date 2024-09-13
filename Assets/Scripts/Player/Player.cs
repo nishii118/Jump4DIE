@@ -11,20 +11,27 @@ public class Player : MonoBehaviour
     public bool CanFly { get; set; }
     public bool IsTheFirstTimeTouch { get; set; }
     private bool isDie = false;
+    private bool isJumping = false;
+
+    Animator animator;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         CanFly = true;
         IsTheFirstTimeTouch = true;
+        isJumping = false;
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
         if (isDie) return;
         Move();
         OnDie();
+        ProcessAnimation();
     }
 
+    public void SetIsFlying(bool value) { isJumping = value; }
     void Move()
     {
         if (Input.touchCount > 0)
@@ -35,6 +42,7 @@ public class Player : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
                 CanFly = false;
+                isJumping = true;
             }
             else if (touch.phase == TouchPhase.Ended)
             {
@@ -49,6 +57,18 @@ public class Player : MonoBehaviour
         {
             //Debug.Log("Die");
             isDie = true;
+        }
+    }
+
+    void ProcessAnimation()
+    {
+        if (isJumping)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 }
