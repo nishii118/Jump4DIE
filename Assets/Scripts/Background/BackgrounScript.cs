@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackGroundScript : MonoBehaviour
+public class BackgroundFitter : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
 
