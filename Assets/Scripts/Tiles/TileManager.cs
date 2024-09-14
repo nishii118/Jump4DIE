@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,8 @@ public class TileManager : Singleton<TileManager>
     Vector3 spawnPosition;
     private float tileHeight;
     private float screenHeight;
-    private float screenWidth;
+    private float screenWidth; // mấy cái biến screen này em có thể tạo class khác để chứa cho clean nhé,
+                               // với cái này hình như có API lấy luôn được anh cmt ở dưới
     private float randomX;
     [SerializeField] Player player;
     //[SerializeField] float speedMove = 5f;
@@ -22,8 +23,9 @@ public class TileManager : Singleton<TileManager>
     }
     void Start()
     {
-        screenHeight = Camera.main.orthographicSize * 2;
-        screenWidth = Camera.main.orthographicSize * Camera.main.aspect * 2;
+        screenHeight = Camera.main.orthographicSize * 2; //=Screen.height;
+        screenWidth = Camera.main.orthographicSize * Camera.main.aspect * 2; //=Screen.width;
+
         tileHeight = screenHeight / 4;
         spawnPosition = new Vector3(transform.position.x, screenHeight / 4, transform.position.z);
         InitializeTiles();
@@ -67,8 +69,6 @@ public class TileManager : Singleton<TileManager>
 
     public void SpawnNewTiles(int tilePosition)
     {
-
-
         if (tilePosition == 2)
         {
             randomX = Random.Range(-screenWidth / 3, screenWidth / 3);

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,20 +8,20 @@ public class Player : MonoBehaviour
 
     Touch touch;
     Rigidbody2D rb;
-    public bool CanFly { get; set; }
+    public bool CanFly { get; set; } //anh thấy biến này =!isJumping thì phải, đang dư thừa dữ liệu, em xem tối ưu được k nhé
     public bool IsTheFirstTimeTouch { get; set; }
-    private bool isDie = false;
-    private bool isJumping = false;
+    private bool isDie;
+    private bool isJumping;
 
     Animator animator;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        animator = GetComponent<Animator>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation; //chinh trong prefab duoc,cho constrain ay,anh chinh cho roi day
         CanFly = true;
         IsTheFirstTimeTouch = true;
         isJumping = false;
-        animator = GetComponent<Animator>();
     }
     void Update()
     {
