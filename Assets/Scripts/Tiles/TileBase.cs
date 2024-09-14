@@ -4,6 +4,7 @@ public class TileBase : MonoBehaviour
 {
     BoxCollider2D boxCollider2D;
     CapsuleCollider2D capsuleCollider2D;
+    //CircleCollider2D circleCollider2D;
     [SerializeField] float moveSpeed = 5f;
     private Vector2 direction = Vector2.right;
     private Vector3 leftEdge;
@@ -24,6 +25,7 @@ public class TileBase : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        //circleCollider2D = GetComponent<CircleCollider2D>();
         //SetStartPosition();
     }
     public void Initialize(TileSO data)
@@ -49,6 +51,7 @@ public class TileBase : MonoBehaviour
     {
         boxCollider2D.enabled = true;
         capsuleCollider2D.enabled = true;
+        //circleCollider2D.enabled = true;
         colliderCount = 0;
         isStayWithPlayer = false;
         spriteRenderer.sprite = defaultSprite;
@@ -96,6 +99,7 @@ public class TileBase : MonoBehaviour
             //Debug.Log("Trigger exit");
             boxCollider2D.enabled = false;
             capsuleCollider2D.enabled = false;
+            //circleCollider2D.enabled = false;
         }
         
     }
@@ -127,16 +131,21 @@ public class TileBase : MonoBehaviour
     private void  OnTriggerEnter2D(Collider2D other)
     {
         
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") )
         {
             Player player = other.GetComponent<Player>();
             other.transform.SetParent(this.transform);
             // jump once
             player.CanFly = true;
             player.SetIsFlying(false);
-            Debug.Log(this.tileIndex);
+            Debug.Log("enter: index = " + this.tileIndex);
             if (this.tileSO.tileIndex != 0)
             {
+
+
+                
+
+                // tile process logic
                 TileManager.Instance.ProcessTilesAfterPlayerJump(this.tileIndex);   
                 TileManager.Instance.SpawnNewTiles(this.tileIndex);
                 TileManager.Instance.OnMoveWhenChange(this.tileIndex);
@@ -146,11 +155,21 @@ public class TileBase : MonoBehaviour
                
                 this.tileIndex = 1;
                 Debug.Log("after change + " + this.tileIndex);
+
+                
             }
 
-            
-
+            // 
+            //if (other.CompareTag("Player") && circleCollider2D.IsTouching(other))
+            //{
+            //    if (this.tileSO.tileIndex != 0)
+            //    {
+         
+            //    }
+            //}
         }
+
+        
     }
 
     

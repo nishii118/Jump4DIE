@@ -77,13 +77,19 @@ public class TileManager : Singleton<TileManager>
             {
                 TileSO data = tileSOs[3];
                 TileBase tile = tmp.GetComponent<TileBase>();
-                
+                //PerfectPoint perfectPoint = tmp.GetComponentInChildren<PerfectPoint>();
+
                 tile.Initialize(data);
                 tmp.transform.position = spawnPosition;
                 tmp.transform.rotation = Quaternion.identity;
+
                 tmp.SetActive(true);
+
                 tile.ResetTileValue();
+                //perfectPoint.ResetPerfectPoint();
+
                 activeTiles.Add(tmp);
+
                 spawnPosition = new Vector3(transform.position.x, spawnPosition.y - tileHeight, transform.position.z);
             }
         } else
@@ -96,13 +102,18 @@ public class TileManager : Singleton<TileManager>
                 {
                     TileSO data = tileSOs[i];
                     TileBase tile = tmp.GetComponent<TileBase>();
-                    
+                    //PerfectPoint perfectPoint = tmp.GetComponentInChildren<PerfectPoint>();
+
                     tile.Initialize(data);
                     tmp.transform.position = spawnPosition;
                     tmp.transform.rotation = Quaternion.identity;
+
                     tmp.SetActive(true);
                     tile.ResetTileValue();
+                    //perfectPoint.ResetPerfectPoint();
+
                     activeTiles.Add(tmp);
+
                     spawnPosition = new Vector3(transform.position.x, spawnPosition.y - tileHeight, transform.position.z);
                 }
             }
@@ -118,6 +129,7 @@ public class TileManager : Singleton<TileManager>
             GameObject tile = activeTiles[i];
             TileBase tileBase = tile.GetComponent<TileBase>();
             Debug.Log("i = " + i + " tileindex = " +tileBase.GetTileInDex());
+
             if (tileBase.GetTileInDex() < tilePosition)
             {
                 tile.SetActive(false);

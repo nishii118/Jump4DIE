@@ -8,7 +8,9 @@ public class ScoreManager : Singleton<ScoreManager>
     [SerializeField] TextMeshProUGUI scoreTxt;
 
     private int score;
+    private bool isGetPerfectPoints = false;
 
+    public void SetIsGetPerfectPoints() {  isGetPerfectPoints = true; }
     private void Start()
     {
         score = 0;
@@ -22,5 +24,7 @@ public class ScoreManager : Singleton<ScoreManager>
     public void UpdateScore(int scoreValue)
     {
         score+= scoreValue;
+        if (isGetPerfectPoints) { score += scoreValue; }
+        isGetPerfectPoints = false;
     }
 }
