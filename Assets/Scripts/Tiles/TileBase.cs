@@ -1,11 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TileBase : MonoBehaviour
 {
     BoxCollider2D boxCollider2D;
     CapsuleCollider2D capsuleCollider2D;
-    //CircleCollider2D circleCollider2D;
+
     [SerializeField] float moveSpeed = 5f;
+
     private Vector2 direction = Vector2.right;
     private Vector3 leftEdge;
     private Vector3 rightEdge;
@@ -25,8 +27,6 @@ public class TileBase : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //circleCollider2D = GetComponent<CircleCollider2D>();
-        //SetStartPosition();
     }
     public void Initialize(TileSO data)
     {
@@ -51,7 +51,6 @@ public class TileBase : MonoBehaviour
     {
         boxCollider2D.enabled = true;
         capsuleCollider2D.enabled = true;
-        //circleCollider2D.enabled = true;
         colliderCount = 0;
         isStayWithPlayer = false;
         spriteRenderer.sprite = defaultSprite;
@@ -62,7 +61,6 @@ public class TileBase : MonoBehaviour
         {
             OnMove();
         }
-        //RemoveTilesOutsideScreen();
     }
 
     void OnMove()
@@ -93,7 +91,13 @@ public class TileBase : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.SetParent(null);
             //Debug.Log("Trigger exit");
@@ -101,12 +105,45 @@ public class TileBase : MonoBehaviour
             capsuleCollider2D.enabled = false;
             //circleCollider2D.enabled = false;
         }
-        
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.CompareTag("Player") == true)
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Player player = other.gameObject.GetComponent<Player>();
+            other.transform.SetParent(this.transform);
+            // jump once
+            player.CanFly = true;
+            player.SetIsFlying(false);
+            Debug.Log("enter: index = " + this.tileIndex);
+            if (this.tileSO.tileIndex != 0)
+            {
+
+
+
+
+                // tile process logic
+                TileManager.Instance.ProcessTilesAfterPlayerJump(this.tileIndex);
+                TileManager.Instance.SpawnNewTiles(this.tileIndex);
+                TileManager.Instance.OnMoveWhenChange(this.tileIndex);
+
+                // update score
+                ScoreManager.AddScore(this.tileIndex - 1);
+
+                this.tileIndex = 1;
+                Debug.Log("after change + " + this.tileIndex);
+
+
+            }
+
+
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") == true)
         {
             isStayWithPlayer = true;
         }
@@ -122,6 +159,10 @@ public class TileBase : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+       
+    }
 
     private void ProcessColliderCouting()
     {
@@ -131,36 +172,7 @@ public class TileBase : MonoBehaviour
     private void  OnTriggerEnter2D(Collider2D other)
     {
         
-        if (other.CompareTag("Player") )
-        {
-            Player player = other.GetComponent<Player>();
-            other.transform.SetParent(this.transform);
-            // jump once
-            player.CanFly = true;
-            player.SetIsFlying(false);
-            Debug.Log("enter: index = " + this.tileIndex);
-            if (this.tileSO.tileIndex != 0)
-            {
-
-
-                
-
-                // tile process logic
-                TileManager.Instance.ProcessTilesAfterPlayerJump(this.tileIndex);   
-                TileManager.Instance.SpawnNewTiles(this.tileIndex);
-                TileManager.Instance.OnMoveWhenChange(this.tileIndex);
-
-                // update score
-                ScoreManager.AddScore(this.tileIndex - 1);
-               
-                this.tileIndex = 1;
-                Debug.Log("after change + " + this.tileIndex);
-
-                
-            }
-
-            
-        }
+        
 
         
     }

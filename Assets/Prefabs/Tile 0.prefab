@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1879730076385350871}
   - component: {fileID: -728475600891942348}
   - component: {fileID: -5738421899491770807}
-  - component: {fileID: 4620848681847167601}
   m_Layer: 0
   m_Name: Tile 0
   m_TagString: Untagged
@@ -193,9 +192,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008614358, y: 0.3993714}
-  m_Size: {x: 2.4665904, y: 0.32949528}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0.36929873}
+  m_Size: {x: 0.17352003, y: 0.46330777}
+  m_Direction: 0
 --- !u!114 &-5738421899491770807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,38 +210,3 @@ MonoBehaviour:
   moveSpeed: 2
   defaultSprite: {fileID: 1699487432, guid: e089a192ff6059f4eaec909b94b4ef1d, type: 3}
   breakingSprite: {fileID: 280128060, guid: e089a192ff6059f4eaec909b94b4ef1d, type: 3}
---- !u!58 &4620848681847167601
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5995504262692162617}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.4168301}
-  serializedVersion: 2
-  m_Radius: 0.17774242
