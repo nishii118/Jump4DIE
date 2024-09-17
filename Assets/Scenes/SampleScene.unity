@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 462575066}
   - component: {fileID: 462575065}
   - component: {fileID: 462575064}
+  - component: {fileID: 462575067}
   m_Layer: 5
   m_Name: 'Score '
   m_TagString: Untagged
@@ -489,6 +490,19 @@ RectTransform:
   m_AnchoredPosition: {x: 65.40393, y: -90}
   m_SizeDelta: {x: 177.3021, y: 130.6235}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &462575067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462575063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95273f7268f5cee4e9f059d850a2cec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTxt: {fileID: 462575064}
 --- !u!1 &469759504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,52 +1086,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_TargetDisplay: 0
---- !u!1 &1722275021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1722275023}
-  - component: {fileID: 1722275022}
-  m_Layer: 0
-  m_Name: Score Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1722275022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722275021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977a68f5384a158469e73f56c9ad88bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  scoreTxt: {fileID: 462575064}
---- !u!4 &1722275023
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722275021}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 540, y: 1140, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865276620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1095,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865276622}
-  - component: {fileID: 1865276621}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -1135,20 +1102,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1865276621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865276620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e756a1f9a097a6f4bbbcca8cbaa92dbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  perfectPointUI: {fileID: 469759504}
 --- !u!4 &1865276622
 Transform:
   m_ObjectHideFlags: 0
@@ -1241,6 +1194,5 @@ SceneRoots:
   - {fileID: 21568898}
   - {fileID: 1540836160}
   - {fileID: 1936328918}
-  - {fileID: 1722275023}
   - {fileID: 861442886}
   - {fileID: 1865276622}

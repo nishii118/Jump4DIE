@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PerfectPoint : MonoBehaviour
@@ -16,7 +15,7 @@ public class PerfectPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // perfect points
-            ScoreManager.Instance.SetIsGetPerfectPoints();
+            //ScoreManager.Instance.SetIsGetPerfectPoints();
             UIManager.Instance.ShowPerfectUI();
         }
     }

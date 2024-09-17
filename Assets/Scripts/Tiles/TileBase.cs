@@ -151,7 +151,7 @@ public class TileBase : MonoBehaviour
                 TileManager.Instance.OnMoveWhenChange(this.tileIndex);
 
                 // update score
-                ScoreManager.Instance.UpdateScore(this.tileIndex - 1);
+                ScoreManager.AddScore(this.tileIndex - 1);
                
                 this.tileIndex = 1;
                 Debug.Log("after change + " + this.tileIndex);
@@ -159,14 +159,7 @@ public class TileBase : MonoBehaviour
                 
             }
 
-            // 
-            //if (other.CompareTag("Player") && circleCollider2D.IsTouching(other))
-            //{
-            //    if (this.tileSO.tileIndex != 0)
-            //    {
-         
-            //    }
-            //}
+            
         }
 
         
