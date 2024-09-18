@@ -116,7 +116,7 @@ public class TileBase : MonoBehaviour
             // jump once
             player.CanFly = true;
             player.SetIsFlying(false);
-            Debug.Log("enter: index = " + this.tileIndex);
+            //Debug.Log("enter: index = " + this.tileIndex);
             if (this.tileSO.tileIndex != 0)
             {
 
@@ -132,7 +132,7 @@ public class TileBase : MonoBehaviour
                 ScoreManager.AddScore(this.tileIndex - 1);
 
                 this.tileIndex = 1;
-                Debug.Log("after change + " + this.tileIndex);
+                //Debug.Log("after change + " + this.tileIndex);
 
 
             }

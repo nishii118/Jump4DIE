@@ -60,7 +60,7 @@ public class TileManager : Singleton<TileManager>
                 tmp.transform.rotation = Quaternion.identity;
                 tmp.SetActive(true);
                 activeTiles.Add(tmp);
-                Debug.Log("i = " + i + "tile index = " + data.tileIndex);
+                //Debug.Log("i = " + i + "tile index = " + data.tileIndex);
                 spawnPosition = new Vector3(randomX, spawnPosition.y - tileHeight, transform.position.z);
                 //Debug.Log(data.tileIndex);
             }
@@ -128,20 +128,20 @@ public class TileManager : Singleton<TileManager>
         {
             GameObject tile = activeTiles[i];
             TileBase tileBase = tile.GetComponent<TileBase>();
-            Debug.Log("i = " + i + " tileindex = " +tileBase.GetTileInDex());
+            //Debug.Log("i = " + i + " tileindex = " +tileBase.GetTileInDex());
 
             if (tileBase.GetTileInDex() < tilePosition)
             {
                 tile.SetActive(false);
                 activeTiles.RemoveAt(i);
                 i--;
-                Debug.Log("just removed: " + tileBase.GetTileInDex());
+                //Debug.Log("just removed: " + tileBase.GetTileInDex());
             }
             else if (tileBase.GetTileInDex() > tilePosition)
             {
-                Debug.Log("before process " + tileBase.GetTileInDex());
+                //Debug.Log("before process " + tileBase.GetTileInDex());
                 tileBase.SetTileInDex(tilePosition);
-                Debug.Log("after process " + tileBase.GetTileInDex());
+                //Debug.Log("after process " + tileBase.GetTileInDex());
             }
         }
     }

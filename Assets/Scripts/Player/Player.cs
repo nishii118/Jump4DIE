@@ -57,6 +57,10 @@ public class Player : MonoBehaviour
         {
             //Debug.Log("Die");
             isDie = true;
+
+            //Panel logic
+            PanelManager.Instance.CloseAll();
+            PanelManager.Instance.OpenPanel("GameOverPanel");
         }
     }
 

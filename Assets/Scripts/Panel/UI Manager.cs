@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
+
     [SerializeField] GameObject perfectPointUI;
     public void ShowPerfectUI()
     {
