@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Player : MonoBehaviour
     public bool CanFly { get; set; } //anh thấy biến này =!isJumping thì phải, đang dư thừa dữ liệu, em xem tối ưu được k nhé
     public bool IsTheFirstTimeTouch { get; set; }
     private bool isDie;
-    private bool isJumping;
+    //private bool isJumping;
 
     Animator animator;
     private void Start()
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation; //chinh trong prefab duoc,cho constrain ay,anh chinh cho roi day
         CanFly = true;
         IsTheFirstTimeTouch = true;
-        isJumping = false;
+        //isJumping = false;
     }
     void Update()
     {
@@ -31,18 +32,22 @@ public class Player : MonoBehaviour
         ProcessAnimation();
     }
 
-    public void SetIsFlying(bool value) { isJumping = value; }
+    public void SetIsFlying(bool value) { CanFly = value; }
     void Move()
     {
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
+            if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+            {
+                return; // Ignore touch if it's over a UI element
+            }
 
             if (touch.phase == TouchPhase.Began && CanFly == true)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
                 CanFly = false;
-                isJumping = true;
+                //isJumping = true;
             }
             else if (touch.phase == TouchPhase.Ended)
             {
@@ -66,7 +71,7 @@ public class Player : MonoBehaviour
 
     void ProcessAnimation()
     {
-        if (isJumping)
+        if (!CanFly)
         {
             animator.SetBool("isJumping", true);
         }

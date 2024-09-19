@@ -113,9 +113,11 @@ public class TileBase : MonoBehaviour
         {
             Player player = other.gameObject.GetComponent<Player>();
             other.transform.SetParent(this.transform);
+
             // jump once
-            player.CanFly = true;
-            player.SetIsFlying(false);
+            //player.CanFly = true;
+            player.SetIsFlying(true);
+
             //Debug.Log("enter: index = " + this.tileIndex);
             if (this.tileSO.tileIndex != 0)
             {

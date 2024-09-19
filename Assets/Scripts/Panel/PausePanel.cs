@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class PausePanel : Panel
 {
+    //[SerializeField] Player player;
     public void OnClickExitBtn()
     {
         Time.timeScale = 1f;
         Debug.Log("Onclick Exit BTN on PausePanel");
         PanelManager.Instance.OpenPanel("GamePlayUI");
         Close();
+        //player.CanFly = true;
     }
 
     public void ReloadGame()
@@ -19,6 +21,7 @@ public class PausePanel : Panel
         //PanelManager.Instance.CloseAll(); 
         Debug.Log("Reload curren scence");
         GameManager.Instance.ReloadCurrentScene();
+        //player.CanFly = true;
     }
 
     public void OnClickHomeButton()
