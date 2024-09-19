@@ -23,6 +23,9 @@ public class TileManager : Singleton<TileManager>
     }
     void Start()
     {
+
+
+
         screenHeight = Camera.main.orthographicSize * 2; //=Screen.height;
         screenWidth = Camera.main.orthographicSize * Camera.main.aspect * 2; //=Screen.width;
 

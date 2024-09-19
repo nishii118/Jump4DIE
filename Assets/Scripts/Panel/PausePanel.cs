@@ -13,6 +13,10 @@ public class PausePanel : Panel
 
     public void ReloadGame()
     {
+        Time.timeScale = 1f;
+        PanelManager.Instance.CloseAll();
+        PanelManager.Instance.OpenPanel("GamePlayUI");
+        //PanelManager.Instance.CloseAll(); 
         Debug.Log("Reload curren scence");
         GameManager.Instance.ReloadCurrentScene();
     }

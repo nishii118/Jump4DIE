@@ -6,7 +6,7 @@ public class TileBase : MonoBehaviour
     BoxCollider2D boxCollider2D;
     CapsuleCollider2D capsuleCollider2D;
 
-    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float moveSpeed = 2.5f;
 
     private Vector2 direction = Vector2.right;
     private Vector3 leftEdge;

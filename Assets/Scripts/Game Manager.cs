@@ -1,6 +1,6 @@
 
 using UnityEngine.SceneManagement;
-
+using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -17,6 +17,7 @@ public class GameManager : Singleton<GameManager>
     public void ReloadCurrentScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();
+        Debug.Log(currentScene.name);
         SceneManager.LoadScene(currentScene.name);
     }
 }
