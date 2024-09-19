@@ -17,5 +17,9 @@ public class MainMenu : MonoBehaviour
 
     }
 
-
+    public void OnClickPlayButton()
+    {
+        GameManager.Instance.LoadSceneByName("GameScene");
+        Time.timeScale = 1f;
+    }
 }

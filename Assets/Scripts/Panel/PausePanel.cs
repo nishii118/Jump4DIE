@@ -20,4 +20,9 @@ public class PausePanel : Panel
         Debug.Log("Reload curren scence");
         GameManager.Instance.ReloadCurrentScene();
     }
+
+    public void OnClickHomeButton()
+    {
+        GameManager.Instance.LoadSceneByName("MainMenu");
+    }
 }
