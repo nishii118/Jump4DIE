@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnClickSettingButton()
     {
-        
+        Debug.Log("On click setting btn");
+        PanelManager.Instance.OpenPanel("BlurPanel");
+        PanelManager.Instance.OpenPanel("SettingPanel");
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClickSkinAndBackgroundButton()
     {
-        
+        PanelManager.Instance.OpenPanel("BlurPanel");
+        PanelManager.Instance.OpenPanel("SkinAndBackgroundPanel");
+
     }
+
+
 }

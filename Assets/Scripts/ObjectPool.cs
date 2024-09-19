@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +19,6 @@ public class ObjectPool : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         Init();
     }
     void Init()
@@ -47,7 +45,5 @@ public class ObjectPool : MonoBehaviour
         GameObject tmp = Instantiate(objectToPool, transform);
         amountToPool++;
         return tmp;
-    }
-
-    //public void Remove
+    }    
 }
