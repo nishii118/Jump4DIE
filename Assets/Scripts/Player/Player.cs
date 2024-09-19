@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began && CanFly == true)
             {
+                PanelManager.Instance.ClosePanel("PreGamePanel");
                 rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
                 CanFly = false;
                 //isJumping = true;
