@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 2354476784936204957}
   - component: {fileID: 3623596241155824208}
   - component: {fileID: 7900424839784722419}
+  - component: {fileID: 4118457119457963924}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -272,7 +273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 907034765, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -282,6 +283,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4118457119457963924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206280604378879313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60101d82a6683546823746bf0170bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
+  audioOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
+  image: {fileID: 7900424839784722419}
+  isSFX: 1
+  isBGM: 0
 --- !u!1 &7284719640826867924
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +420,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1613780258022627299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6032346177161026895}
+        m_TargetAssemblyTypeName: SettingPanel, Assembly-CSharp
+        m_MethodName: OnClickBackgroundMusicBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7562046897691858114
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6446010974183926421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6032346177161026895}
+        m_TargetAssemblyTypeName: SettingPanel, Assembly-CSharp
+        m_MethodName: OnClickSFXBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8382086777559999461
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +773,7 @@ GameObject:
   - component: {fileID: 5930382005413083299}
   - component: {fileID: 180607977480197889}
   - component: {fileID: 1201964399889745942}
+  - component: {fileID: 4104971389380380382}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -785,7 +828,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 907034765, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -795,6 +838,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4104971389380380382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8382086777559999461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60101d82a6683546823746bf0170bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
+  audioOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
+  image: {fileID: 1201964399889745942}
+  isSFX: 0
+  isBGM: 1
 --- !u!1 &8956557627964534063
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,3 +949,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnClose: 1
+  audioOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
+  audioOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}

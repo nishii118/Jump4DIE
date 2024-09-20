@@ -31,4 +31,15 @@ public class PausePanel : Panel
     {
         GameManager.Instance.LoadSceneByName("MainMenu");
     }
+
+    public void OnClickBackgroundMusicBtn()
+    {
+        AudioManager.Instance.ToggleBackgroundMusicState();
+
+    }
+
+    public void OnClickSFXBtn()
+    {
+        AudioManager.Instance.ToggleSFXMusicState();
+    }
 }

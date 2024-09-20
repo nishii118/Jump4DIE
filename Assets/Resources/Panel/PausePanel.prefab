@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7236062352490172421}
   - component: {fileID: 4062322244845364489}
   - component: {fileID: 5061065095501177369}
+  - component: {fileID: 3451001711175264803}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -75,6 +76,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3451001711175264803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781330912831999286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60101d82a6683546823746bf0170bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
+  audioOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
+  image: {fileID: 5061065095501177369}
+  isSFX: 0
+  isBGM: 1
 --- !u!1 &1258994067430826701
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +509,7 @@ GameObject:
   - component: {fileID: 9171565453373813750}
   - component: {fileID: 8326416236400951883}
   - component: {fileID: 7363115158074072457}
+  - component: {fileID: 8034730295233159621}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -555,6 +574,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8034730295233159621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130677282693196475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60101d82a6683546823746bf0170bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
+  audioOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
+  image: {fileID: 7363115158074072457}
+  isSFX: 1
+  isBGM: 0
 --- !u!1 &7697584683583468882
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +918,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5859478957334209539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1147678863923432234}
+        m_TargetAssemblyTypeName: PausePanel, Assembly-CSharp
+        m_MethodName: OnClickBackgroundMusicBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8365997221682267330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1126,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2659280565038617105}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1147678863923432234}
+        m_TargetAssemblyTypeName: PausePanel, Assembly-CSharp
+        m_MethodName: OnClickSFXBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9066686753720000353
 GameObject:
   m_ObjectHideFlags: 0

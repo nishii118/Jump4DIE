@@ -155,6 +155,9 @@ public class TileBase : MonoBehaviour
         {
             collision.gameObject.transform.SetParent(null);
             gameObject.SetActive(false);
+
+            // sfx breaking tile
+            if (AudioManager.Instance.GetCanPlayiSFX())AudioManager.Instance.PlaySFX(1);
         }
     }
 

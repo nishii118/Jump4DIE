@@ -49,6 +49,9 @@ public class Player : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
                 CanFly = false;
                 //isJumping = true;
+
+                // sfx
+                if (AudioManager.Instance.GetCanPlayiSFX())AudioManager.Instance.PlaySFX(0); // jump sfx
             }
             else if (touch.phase == TouchPhase.Ended)
             {
@@ -67,6 +70,9 @@ public class Player : MonoBehaviour
             //Panel logic
             PanelManager.Instance.CloseAll();
             PanelManager.Instance.OpenPanel("GameOverPanel");
+
+            // sfx die 
+            if(AudioManager.Instance.GetCanPlayiSFX())AudioManager.Instance.PlaySFX(2);
         }
     }
 
