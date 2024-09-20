@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        ScoreManager.SetHighScore();
+    }
     public void OnClickSettingButton()
     {
         Debug.Log("On click setting btn");
@@ -21,5 +25,7 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.Instance.LoadSceneByName("GameScene");
         Time.timeScale = 1f;
+
+        ScoreManager.ResetScore();
     }
 }

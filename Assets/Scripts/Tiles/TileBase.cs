@@ -89,11 +89,7 @@ public class TileBase : MonoBehaviour
     
         
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        
-        
-    }
+    
 
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -160,10 +156,6 @@ public class TileBase : MonoBehaviour
             collision.gameObject.transform.SetParent(null);
             gameObject.SetActive(false);
         }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-       
     }
 
     private void ProcessColliderCouting()

@@ -15,5 +15,13 @@ public class GameOverPanel : Panel
     public void ReloadGame()
     {
         GameManager.Instance.ReloadCurrentScene();
+        Time.timeScale = 1f;
+
+        ScoreManager.ResetScore();
+    }
+
+    public void OnClickHomeButton()
+    {
+        GameManager.Instance.LoadSceneByName("MainMenu");
     }
 }

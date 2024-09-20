@@ -1,5 +1,6 @@
 ﻿public enum EventKey
 {
     NONE = -1,
-    OnChangeScore
+    OnChangeScore,
+    OnChangeHighScore
 }

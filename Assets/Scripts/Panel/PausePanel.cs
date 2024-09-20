@@ -22,6 +22,9 @@ public class PausePanel : Panel
         Debug.Log("Reload curren scence");
         GameManager.Instance.ReloadCurrentScene();
         //player.CanFly = true;
+
+        //reset score
+        ScoreManager.ResetScore();
     }
 
     public void OnClickHomeButton()
