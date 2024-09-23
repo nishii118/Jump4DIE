@@ -14,25 +14,25 @@ public class SoundView : MonoBehaviour
 
     private void Update()
     {
-        if (isSFX)
-        {
-            if (AudioManager.Instance.GetCanPlayiSFX())
-            {
-                image.sprite = audioOn;
-            } else
-            {
-                image.sprite = audioOff;
-            }
-        } else if (isBGM )
-        {
-            if (AudioManager.Instance.GetCanPlayBGM())
-            {
-                image.sprite = audioOn;
-            }
-            else
-            {
-                image.sprite = audioOff;
-            }
-        }
+        //if (isSFX)
+        //{
+        //    if (AudioManager.Instance.GetCanPlayiSFX())
+        //    {
+        //        image.sprite = audioOn;
+        //    } else
+        //    {
+        //        image.sprite = audioOff;
+        //    }
+        //} else if (isBGM )
+        //{
+        //    if (AudioManager.Instance.GetCanPlayBGM())
+        //    {
+        //        image.sprite = audioOn;
+        //    }
+        //    else
+        //    {
+        //        image.sprite = audioOff;
+        //    }
+        //}
     }
 }

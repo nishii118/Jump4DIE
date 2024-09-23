@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
                 //isJumping = true;
 
                 // sfx
-                if (AudioManager.Instance.GetCanPlayiSFX())AudioManager.Instance.PlaySFX(0); // jump sfx
+                AudioManager.Instance.PlaySFX("Jump");
             }
             else if (touch.phase == TouchPhase.Ended)
             {
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             PanelManager.Instance.OpenPanel("GameOverPanel");
 
             // sfx die 
-            if(AudioManager.Instance.GetCanPlayiSFX())AudioManager.Instance.PlaySFX(2);
+            AudioManager.Instance.PlaySFX("GameOver");
         }
     }
 

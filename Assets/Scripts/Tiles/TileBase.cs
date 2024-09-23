@@ -96,10 +96,8 @@ public class TileBase : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.SetParent(null);
-            //Debug.Log("Trigger exit");
             boxCollider2D.enabled = false;
             capsuleCollider2D.enabled = false;
-            //circleCollider2D.enabled = false;
         }
     }
 
@@ -157,7 +155,7 @@ public class TileBase : MonoBehaviour
             gameObject.SetActive(false);
 
             // sfx breaking tile
-            if (AudioManager.Instance.GetCanPlayiSFX())AudioManager.Instance.PlaySFX(1);
+            AudioManager.Instance.PlaySFX("BreakSound");
         }
     }
 

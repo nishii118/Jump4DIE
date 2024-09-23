@@ -34,12 +34,12 @@ public class PausePanel : Panel
 
     public void OnClickBackgroundMusicBtn()
     {
-        AudioManager.Instance.ToggleBackgroundMusicState();
+        //AudioManager.Instance.ToggleBackgroundMusicState();
 
     }
 
     public void OnClickSFXBtn()
     {
-        AudioManager.Instance.ToggleSFXMusicState();
+        //AudioManager.Instance.ToggleSFXMusicState();
     }
 }

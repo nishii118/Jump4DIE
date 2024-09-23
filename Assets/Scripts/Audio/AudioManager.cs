@@ -1,81 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    AudioSource backgroundMusic;
-    AudioSource[] soundEffects;
-
-    [SerializeField] AudioClip backgroundMusicClip;
-    [SerializeField] AudioClip[] soundEffectsClip;
-
-    private bool canPlaySFX;
-    private bool canPlayBGM;
-
-    public bool GetCanPlayiSFX()
-    {
-        return canPlaySFX;
-    }
-
-    public bool GetCanPlayBGM() { return canPlayBGM; }
+    public Sound[] musicSounds, sfxSounds;
+    public AudioSource musicSource, sfxSource;
 
     private void Start()
     {
-        backgroundMusic = gameObject.AddComponent<AudioSource>();
-        backgroundMusic.clip = backgroundMusicClip;
-        backgroundMusic.loop = true;
-        backgroundMusic.volume = 0.5f;
-        backgroundMusic.Play();
+        PlayMusic("Background");
+    }
 
-        soundEffects = new AudioSource[soundEffectsClip.Length];
-        for (int i = 0; i< soundEffectsClip.Length; i++)
+    public void PlayMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+
+        if (s == null)
         {
-            soundEffects[i] = gameObject.AddComponent<AudioSource>();
-            soundEffects[i].clip = soundEffectsClip[i];
-        }
+            Debug.Log("Sound not found");
+        } else
+        {
+            musicSource.clip = s.clip;
+            musicSource.loop = true;
 
-        canPlaySFX = true;
-        canPlayBGM = true;
+            musicSource.Play();
+
+        }
     }
     
-    public void PlaySFX(int index)
+    public void PlaySFX(string name)
     {
-        soundEffects[index].Play();
-    }
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
 
-    //public void StopSFX() {
-    //    canPlayingSFX = false;
-    //}
-
-    public void PlayBackGroundMusic()
-    {
-        backgroundMusic.Play();
-    }
-
-    public void StopBackGroundMusic()
-    {
-        backgroundMusic.Stop();
-    }
-
-
-    public void ToggleBackgroundMusicState()
-    {
-        canPlayBGM = !canPlayBGM;
-        if (canPlayBGM)
+        if (s == null)
         {
-            backgroundMusic.Play();
-        }
-        else {
-            backgroundMusic.Stop();
+            Debug.Log("Sound not found");
+        } else
+        {
+            sfxSource.clip = s.clip;
+            sfxSource.Play();
         }
     }
 
-    public void ToggleSFXMusicState()
+
+    public void ToggleMusic()
     {
-        canPlaySFX = !canPlaySFX;
-        
+        musicSource.mute = !musicSource.mute;
     }
+
+
+    public void ToggleSFX()
+    {
+        sfxSource.mute = !sfxSource.mute;
+    }
+
+    
 
     
 }
