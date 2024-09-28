@@ -88,11 +88,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60101d82a6683546823746bf0170bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
-  audioOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
+  prefKey: Music
+  spriteOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
+  spriteOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
   image: {fileID: 5061065095501177369}
-  isSFX: 0
-  isBGM: 1
 --- !u!1 &1258994067430826701
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,11 +585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60101d82a6683546823746bf0170bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
-  audioOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
+  prefKey: Sound
+  spriteOn: {fileID: 21300000, guid: 29999049e08975d4098217500edc7e0b, type: 3}
+  spriteOff: {fileID: 21300000, guid: 1cbe5ca5c3221994890fa57c7afb3703, type: 3}
   image: {fileID: 7363115158074072457}
-  isSFX: 1
-  isBGM: 0
 --- !u!1 &7697584683583468882
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,9 +917,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1147678863923432234}
-        m_TargetAssemblyTypeName: PausePanel, Assembly-CSharp
-        m_MethodName: OnClickBackgroundMusicBtn
+      - m_Target: {fileID: 3451001711175264803}
+        m_TargetAssemblyTypeName: SettingToggleButton, Assembly-CSharp
+        m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1127,9 +1125,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1147678863923432234}
-        m_TargetAssemblyTypeName: PausePanel, Assembly-CSharp
-        m_MethodName: OnClickSFXBtn
+      - m_Target: {fileID: 8034730295233159621}
+        m_TargetAssemblyTypeName: SettingToggleButton, Assembly-CSharp
+        m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

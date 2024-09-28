@@ -14,12 +14,13 @@ public class SettingPanel : Panel
 
     public void OnClickBackgroundMusicBtn()
     {
-        //AudioManager.Instance.ToggleBackgroundMusicState();
+        //Debug.Log("Click bg music btn");
+        //AudioManager.ToggleState("Music");
         
     }
 
     public void OnClickSFXBtn()
     {
-        //AudioManager.Instance.ToggleSFXMusicState();
+        //AudioManager.ToggleState("Sound");
     }
 }

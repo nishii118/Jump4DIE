@@ -18,10 +18,26 @@ public class AudioManager : Singleton<AudioManager>
     }
     public static void ToggleState(string key)
     {
-        PlayerPrefs.SetInt(key, PlayerPrefs.GetInt(key, 1));
-        if(key=="Music")
+        //PlayerPrefs.SetInt(key, PlayerPrefs.GetInt(key, 1));
+        //if(key=="Music")
+        //{
+        //    //TODO: stop or play Music (background)
+        //}
+
+        int currentState = PlayerPrefs.GetInt(key, 1);
+        int newState = currentState == 1 ? 0 : 1;
+        PlayerPrefs.SetInt(key, newState);
+
+        if (key == "Music")
         {
-            //TODO: stop or play Music (background)
+           if (newState == 0)
+            {
+                AudioManager.Instance.StopMusic("Background");
+            } else
+            {
+                AudioManager.Instance.PlayMusic("Background");
+
+            }
         }
     }
     public void PlayMusic(string name)
@@ -31,7 +47,7 @@ public class AudioManager : Singleton<AudioManager>
 
         if (s == null)
         {
-            Debug.Log("Sound not found");
+            Debug.Log("Music not found");
         }
         else
         {
@@ -43,6 +59,19 @@ public class AudioManager : Singleton<AudioManager>
         }
     }
 
+    public void StopMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("Music not found");
+        }
+        else
+        {
+            musicSource.clip = s.clip;
+            musicSource.Stop();
+        }
+    }
     public void PlaySFX(string name)
     {
         if (!GetToggleState("Sound")) return;
