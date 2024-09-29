@@ -32,10 +32,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6925833375022448176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 78, y: -58.287}
-  m_SizeDelta: {x: 71.4257, y: 71.426}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 97.76599, y: -77.927376}
+  m_SizeDelta: {x: -127.0423, y: -129.2932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2736397502343178104
 CanvasRenderer:
@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 6522643316194931619}
   - component: {fileID: 7044831476929845557}
   - component: {fileID: 5097981857021070050}
+  - component: {fileID: 3733428352748716023}
   m_Layer: 5
   m_Name: The Forest Background (2)
   m_TagString: Untagged
@@ -578,7 +579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -871923516, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
+  m_Sprite: {fileID: -1406411179, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -631,7 +632,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7044831476929845557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3733428352748716023}
+        m_TargetAssemblyTypeName: Background, Assembly-CSharp
+        m_MethodName: ChangeBackground
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3733428352748716023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987962949321582517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550305b0525234440b89a26abfa6df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefValue: The Snow
+  tickImg: {fileID: 2487184023838098777}
 --- !u!1 &5108141777962225715
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1012,7 @@ GameObject:
   - component: {fileID: 5487436659543992386}
   - component: {fileID: 7820381870499205954}
   - component: {fileID: 8180563261389706747}
+  - component: {fileID: 1971022406976669763}
   m_Layer: 5
   m_Name: The Forest Background (1)
   m_TagString: Untagged
@@ -1094,7 +1122,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7820381870499205954}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971022406976669763}
+        m_TargetAssemblyTypeName: Background, Assembly-CSharp
+        m_MethodName: ChangeBackground
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1971022406976669763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741512616288192615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550305b0525234440b89a26abfa6df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefValue: The Heaven
+  tickImg: {fileID: 6822986815998313160}
 --- !u!1 &5745711666754669279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Hill
+  m_text: 'The Snow
 
 '
   m_isRightToLeft: 0
@@ -1462,10 +1516,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8069903726744239041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 169, y: -144}
-  m_SizeDelta: {x: 71.4257, y: 71.426}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 105, y: -76}
+  m_SizeDelta: {x: -121.01, y: -121.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3367901148386974625
 CanvasRenderer:
@@ -1537,10 +1591,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6702441963227022494}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 167, y: -142}
-  m_SizeDelta: {x: 71.4257, y: 71.426}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 96, y: -81}
+  m_SizeDelta: {x: -137.4884, y: -137.488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2353614214564540853
 CanvasRenderer:
@@ -1592,6 +1646,7 @@ GameObject:
   - component: {fileID: 5417776275635715553}
   - component: {fileID: 7050872347098478975}
   - component: {fileID: 5801192970577044609}
+  - component: {fileID: 6340618032080666167}
   m_Layer: 5
   m_Name: The Forest Background
   m_TagString: Untagged
@@ -1701,4 +1756,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7050872347098478975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6340618032080666167}
+        m_TargetAssemblyTypeName: Background, Assembly-CSharp
+        m_MethodName: ChangeBackground
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6340618032080666167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166784341849435640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550305b0525234440b89a26abfa6df0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefValue: The Forest
+  tickImg: {fileID: 7358537779940465957}
