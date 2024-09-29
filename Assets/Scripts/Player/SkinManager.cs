@@ -62,9 +62,9 @@ public class SkinManager : Singleton<SkinManager>
     //    PlayerPrefs.SetString("SelectedSkin", newSkin);
     //    //set selectedskin
     //}
-    public static void ChangeBackground(string value)
-    {
-        string newBackground = value;
-        PlayerPrefs.SetString("Selected", newBackground);
-    }
+    //public static void ChangeBackground(string value)
+    //{
+    //    string newBackground = value;
+    //    PlayerPrefs.SetString("Selected", newBackground);
+    //}
 }

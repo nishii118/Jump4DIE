@@ -1,14 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundFitter : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
-
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] BackgroundSprite[] backgroundSprites;
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //backgroundSprites = new List<>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
+
+        //spriteRenderer.sprite = 
+        string currentNameSprite = PlayerPrefs.GetString("SelectedBackground");
+        BackgroundSprite currentSprite = Array.Find(backgroundSprites, x => x.name == currentNameSprite);
+        spriteRenderer.sprite = currentSprite.sprite;
+        ResizeBackground();
+    }
+
+    public void ResizeBackground()
+    {
         if (spriteRenderer == null) return;
 
         transform.localScale = Vector3.one;

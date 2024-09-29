@@ -332,6 +332,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7279d8edef93304cacf0839e3ac8a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 455164149}
+  backgroundSprites:
+  - name: The Snow
+    sprite: {fileID: 1510764708, guid: d9a645fedcdb835429cc3076d8e3cd7d, type: 3}
+  - name: The Forest
+    sprite: {fileID: -1117913744, guid: d9a645fedcdb835429cc3076d8e3cd7d, type: 3}
+  - name: The Heaven
+    sprite: {fileID: 209983161, guid: d010f7702df5c0e47a05eb35a9db7ba7, type: 3}
 --- !u!222 &455164151
 CanvasRenderer:
   m_ObjectHideFlags: 0

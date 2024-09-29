@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Skin : MonoBehaviour
 {
-    [SerializeField] string prefKey; // skin name
+    [SerializeField] string prefValue; // skin name
     [SerializeField] Sprite spriteBgEnable;
     [SerializeField] Sprite spriteBgUnnable;
     [SerializeField] Sprite spriteTick;
@@ -25,7 +25,7 @@ public class Skin : MonoBehaviour
     }
     public void UpdateState()
     {
-        if (SkinManager.GetSkinState() == prefKey)
+        if (SkinManager.GetSkinState() == prefValue)
         {
             backgroundImg.sprite = spriteBgEnable;
             tickImg.gameObject.SetActive(true);
@@ -46,7 +46,7 @@ public class Skin : MonoBehaviour
 
     public void ChangeSkin()
     {
-        string newSkin = prefKey;
+        string newSkin = prefValue;
         PlayerPrefs.SetString("SelectedSkin", newSkin);
         //set selectedskin
 
