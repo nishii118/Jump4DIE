@@ -18,6 +18,7 @@ public class PanelManager : Singleton<PanelManager>
     {
         if (IsExisted(name))
         {
+            Debug.Log("exist panel");
             return panels[name];
         }
         //Load panel len tu resources
@@ -27,7 +28,7 @@ public class PanelManager : Singleton<PanelManager>
         Panel newPanel = Instantiate(panel, transform);
         newPanel.name = name;
         newPanel.gameObject.SetActive(false);
-
+        //Debug.Log(newPanel + "new panelllll");
         //luu lai vao trong map
         panels[name] = newPanel;
         return newPanel;

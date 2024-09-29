@@ -16,8 +16,10 @@ public class MainMenu : MonoBehaviour
 
     public void OnClickSkinAndBackgroundButton()
     {
+        Debug.Log("gen blur panel");
         PanelManager.Instance.OpenPanel("BlurPanel");
-        PanelManager.Instance.OpenPanel("SkinAndBackgroundPanel");
+        Debug.Log("gen main panel");
+        PanelManager.Instance.OpenPanel("SkinSelectionPanel");
 
     }
 
