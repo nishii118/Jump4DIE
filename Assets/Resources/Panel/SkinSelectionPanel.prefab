@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ef6321fb1576f4c88edbad0108ce50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefKey: Green
+  prefValue: Green
   spriteBgEnable: {fileID: 687326040, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
   spriteBgUnnable: {fileID: -1935041666, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
   spriteTick: {fileID: 213160801, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ef6321fb1576f4c88edbad0108ce50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefKey: Men
+  prefValue: Men
   spriteBgEnable: {fileID: 687326040, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
   spriteBgUnnable: {fileID: -1935041666, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
   spriteTick: {fileID: 213160801, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ef6321fb1576f4c88edbad0108ce50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefKey: Penguine
+  prefValue: Penguine
   spriteBgEnable: {fileID: 687326040, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
   spriteBgUnnable: {fileID: -1935041666, guid: dd5f467eb1a43204cab2187ea4271222, type: 3}
   spriteTick: {fileID: 0}

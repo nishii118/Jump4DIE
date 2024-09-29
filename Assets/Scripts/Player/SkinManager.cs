@@ -24,6 +24,15 @@ public class SkinManager : Singleton<SkinManager>
         }
     }
 
+    public void ClearAllSkin()
+    {
+        skins.Clear ();
+    }
+
+    public void ClearAllBackground()
+    {
+        backgrounds.Clear ();
+    }
     public void RegisterBackground(Background background)
     {
         if (!backgrounds.Contains(background))

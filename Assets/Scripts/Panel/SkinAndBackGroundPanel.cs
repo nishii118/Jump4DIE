@@ -6,6 +6,8 @@ public class SkinAndBackGroundPanel : Panel
 { 
   public void OnClickExitButton()
     {
+        SkinManager.Instance.ClearAllSkin();
+        SkinManager.Instance.ClearAllBackground();
         PanelManager.Instance.CloseAll();
     } 
     
