@@ -1,12 +1,37 @@
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SkinManager : Singleton<SkinManager>
 {
     private List<Skin> skins ;
     private List<Background> backgrounds;
-    
+
+    [SerializeField] PlayerSelection[] players;
+    private bool isRegistered = false;
+
+    //private void Awake()
+    //{
+    //    if (!isRegistered)
+    //    {
+    //        SceneManager.sceneLoaded += OnSceneLoaded;
+    //        isRegistered = true;
+    //    }
+    //}
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GameScene")
+        {
+            GeneratePlayerObject();
+            Debug.Log("Player generated in GameScene");
+        }
+    }
     private void Start()
     {
         skins = new List<Skin> ();
@@ -76,4 +101,17 @@ public class SkinManager : Singleton<SkinManager>
     //    string newBackground = value;
     //    PlayerPrefs.SetString("Selected", newBackground);
     //}
+
+    public void GeneratePlayerObject()
+    {
+        PlayerSelection currentPlayer = Array.Find(players, x => x.name == PlayerPrefs.GetString("SelectedSkin"));
+        //GameObject newPlayer
+        //
+        GameObject player = Instantiate(currentPlayer.player);
+        player.gameObject.transform.position = new Vector3(0, 5, 0);
+        player.gameObject.transform.rotation = Quaternion.identity;
+        player.gameObject.SetActive(true);
+
+        Debug.Log("generate: " + player);
+    }
 }

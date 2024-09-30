@@ -122,67 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &21568898
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6840248164133953911, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_GravityScale
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7322577508348498391, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8817985598929591826, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
 --- !u!1 &170957550
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  player: {fileID: 898535433}
+  player: {fileID: 0}
   tileSOs:
   - {fileID: 11400000, guid: 1fe1e1788d66abc4a80103e78a8c8138, type: 2}
   - {fileID: 11400000, guid: 94742fa2385a30b49863bc7ef6e233b2, type: 2}
@@ -460,17 +399,6 @@ Transform:
   - {fileID: 455164152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &898535433 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8230304659258467081, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-  m_PrefabInstance: {fileID: 21568898}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a11fd7b24b6a4964b94270418090d687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1577825667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -821,7 +749,7 @@ PrefabInstance:
     - target: {fileID: 1892066922072621757, guid: aad3d4048eaf9fa4ea171fb03b6e4d71, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 898535433}
+      objectReference: {fileID: 0}
     - target: {fileID: 3657054709047865352, guid: aad3d4048eaf9fa4ea171fb03b6e4d71, type: 3}
       propertyPath: m_Name
       value: GamePlay UI
@@ -841,7 +769,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 170957551}
-  - {fileID: 21568898}
   - {fileID: 1936328918}
   - {fileID: 2739219100188567418}
   - {fileID: 1865276622}

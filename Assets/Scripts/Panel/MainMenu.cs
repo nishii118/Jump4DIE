@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -29,5 +30,12 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1f;
 
         ScoreManager.ResetScore();
+
+
+        //SceneManager.sceneLoaded += OnGameSceneLoaded;
+        //SkinManager.Instance.GeneratePlayerObject();
+        //Debug.Log("gen player");
     }
+
+    
 }

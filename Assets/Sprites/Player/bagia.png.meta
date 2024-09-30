@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bagia_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 219
+        width: 86
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7820d8e24b42c8f40a3c92ce64daab87
+      internalID: -2007765023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bagia_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 162
+        width: 81
+        height: 57
+      alignment: 9
+      pivot: {x: 0.94, y: 0.9}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eccfc954b31d6d34e94db1b3f54d0c41
+      internalID: -1568904108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bagia_2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 162
+        width: 69
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdc204c5b8368c44a022d91f5b2472b
+      internalID: 360038909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bagia_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 2
+        width: 53
+        height: 169
+      alignment: 9
+      pivot: {x: 0.78, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be24dc87947b2d048a23432eb6f67a62
+      internalID: 1659044581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bagia_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 156
+        height: 158
+      alignment: 9
+      pivot: {x: 0.37, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a347e1fd305cd3b41ac39ef5e7b82910
+      internalID: -1662868718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bagia_5
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 2
+        width: 43
+        height: 83
+      alignment: 9
+      pivot: {x: 0.16, y: 0.92}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6fcf8f181a1dc4a87117cc2fda9287
+      internalID: -51012837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bagia_6
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 2
+        width: 47
+        height: 42
+      alignment: 9
+      pivot: {x: 0.88, y: 0.86}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c118afaba06766d45928cd5d19a0638d
+      internalID: 331232622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bagia_7
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2
+        width: 47
+        height: 42
+      alignment: 9
+      pivot: {x: 0.92, y: 0.84}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19157bf14c037cc4caaac2b631bba940
+      internalID: 886945990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +300,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bagia_0: -2007765023
+      bagia_1: -1568904108
+      bagia_2: 360038909
+      bagia_3: 1659044581
+      bagia_4: -1662868718
+      bagia_5: -51012837
+      bagia_6: 331232622
+      bagia_7: 886945990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
