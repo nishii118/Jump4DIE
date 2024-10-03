@@ -1921,7 +1921,7 @@ MonoBehaviour:
   players:
   - name: Penguine
     player: {fileID: 7322577508348498391, guid: ca16da4e02e83cf4881a75c6f63a33d1, type: 3}
-  - name: Man
+  - name: Men
     player: {fileID: 4376723669186458805, guid: 52b428abb1909f545a9e330534045f16, type: 3}
   - name: Green
     player: {fileID: 5588088130901406231, guid: 588f9d0f668bc694985efd4fa009fbb5, type: 3}
