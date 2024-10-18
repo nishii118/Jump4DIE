@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+﻿using Unity.VisualScripting;
 using UnityEngine;
 
 public class TileBase : MonoBehaviour
@@ -39,13 +39,13 @@ public class TileBase : MonoBehaviour
     {
         return tileSO.scoreValue;
     }
-    
+
     public void SetTileInDex(int index) { tileIndex = index; }
     public BoxCollider2D GetBoxCollider2D() { return boxCollider2D; }
-    public CapsuleCollider2D GetCapsuleCollider2D() {return capsuleCollider2D; }
+    public CapsuleCollider2D GetCapsuleCollider2D() { return capsuleCollider2D; }
 
     public TileSO GetTileSO() { return tileSO; }
-    
+
 
     public void ResetTileValue()
     {
@@ -67,16 +67,16 @@ public class TileBase : MonoBehaviour
     {
         transform.Translate(direction * moveSpeed * Time.deltaTime);
 
-        leftEdge = Camera.main.WorldToViewportPoint(new Vector3((transform.position.x - transform.localScale.x / 2 ), transform.position.y, transform.position.z));
+        leftEdge = Camera.main.WorldToViewportPoint(new Vector3((transform.position.x - transform.localScale.x / 2), transform.position.y, transform.position.z));
         rightEdge = Camera.main.WorldToViewportPoint(new Vector3((transform.position.x + transform.localScale.x / 2), transform.position.y, transform.position.z));
 
         float buffer = 0.05f;
 
-        if (leftEdge.x <= 0 || rightEdge.x >= 1 )
+        if (leftEdge.x <= 0 || rightEdge.x >= 1)
         {
             direction *= -1;
 
-            if(isStayWithPlayer) ProcessColliderCouting();
+            if (isStayWithPlayer) ProcessColliderCouting();
 
             Vector3 clampedPosition = transform.position;
             float minX = Camera.main.ViewportToWorldPoint(new Vector3(buffer, 0, 0)).x;
@@ -86,10 +86,10 @@ public class TileBase : MonoBehaviour
         }
     }
 
-    
-        
 
-    
+
+
+
 
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -164,17 +164,17 @@ public class TileBase : MonoBehaviour
         colliderCount++;
     }
 
-    private void  OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player") && this.tileIndex > 1)
+        if (other.CompareTag("Player") && this.tileIndex > 1)
         {
             ScoreManager.AddScore(this.tileIndex - 1);
             UIManager.Instance.ShowPerfectUI();
         }
-        
 
-        
+
+
     }
 
-    
+
 }
