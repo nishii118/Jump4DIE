@@ -1,3 +1,4 @@
 # Jump4Die
  
-[![Jump4Die Demo](Assets/Video%20demo/Jump4die.gif)](https://github.com/user-attachments/assets/bf563cac-89c6-4d77-92d1-309aaa7c7e0c)
+
+https://github.com/user-attachments/assets/b2a537ef-e996-46aa-8196-9dfab2805c0f
